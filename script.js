@@ -1,3 +1,10 @@
+function setFullHeight() {
+    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+}
+
+window.addEventListener('resize', setFullHeight);
+window.addEventListener('load', setFullHeight);
+
 const messages = [
     "Initializing…",
     "Loading resources…",
