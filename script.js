@@ -11,4 +11,5 @@ let index = 0;
 setInterval(() => {
     index = (index + 1) % messages.length;
     statusEl.textContent = messages[index];
-}, 3000);
+}, 2700);
+
