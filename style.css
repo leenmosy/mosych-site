@@ -84,6 +84,5 @@ h1 {
     font-size: clamp(12px, 3vw, 14px);
     color: #8faed6;
     font-weight: 500;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
