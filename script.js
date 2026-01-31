@@ -1,8 +1,8 @@
 const messages = [
-    "Инициализация…",
-    "Загрузка ресурсов…",
-    "Настройка интерфейса…",
-    "Почти готово…"
+    "Initializing…",
+    "Loading resources…",
+    "Setting up interface…",
+    "Almost ready…"
 ];
 
 const statusEl = document.getElementById("status");
