@@ -131,4 +131,4 @@ window.onload = () => {
     compensateOfflineTime(); 
     renderUI(); 
     runLoader(); 
-};
+}
