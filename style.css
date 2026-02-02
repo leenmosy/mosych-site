@@ -10,12 +10,10 @@ html {
 }
 
 body {
-    margin: 0;
     min-height: 100dvh;
     font-family: system-ui, -apple-system, sans-serif;
     color: #e6e6e6;
     background: radial-gradient(circle at top, #1b1f27, #0b0d12) no-repeat fixed;
-    line-height: 1.5;
 }
 
 .wrapper {
@@ -35,28 +33,26 @@ body {
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
     width: 100%;
     max-width: 420px;
     padding: 40px 30px;
 
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.45);
     backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
 }
 
 h1 {
     font-size: clamp(24px, 5vw, 32px);
     font-weight: 600;
     text-align: center;
-    color: #e6e6e6;
 }
 
 .loader {
@@ -80,9 +76,45 @@ h1 {
     40% { transform: scale(1); opacity: 1; }
 }
 
+.traffic {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.traffic-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: #9aa4b2;
+}
+
+.traffic-row strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4aa3ff;
+}
+
+.progress {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4aa3ff, #7cc4ff);
+    transition: width 0.7s ease;
+}
+
 #status {
     font-size: clamp(12px, 3vw, 14px);
     color: #8faed6;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    text-align: center;
 }
