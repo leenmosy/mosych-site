@@ -33,6 +33,7 @@ function renderUI() {
     const speedEl = document.getElementById('current-speed');
     const tunnelsEl = document.getElementById('tunnels');
     const timeEl = document.getElementById('local-time');
+    const uplinkEl = document.getElementById('uplink-val');
 
     if (totalEl) {
         const val = Number(stats.totalGB) || 0;
@@ -40,6 +41,12 @@ function renderUI() {
     }
     if (speedEl) speedEl.innerText = (Number(stats.currentSpeed) || 0).toFixed(2) + " Gbps";
     if (tunnelsEl) tunnelsEl.innerText = Math.floor(Number(stats.tunnels) || 0);
+    if (uplinkEl && stats.currentSpeed) {
+        let capacityPercent = (stats.currentSpeed / 5) * 100;
+        capacityPercent += (Math.random() * 1.4 + 0.1); 
+        if (capacityPercent > 99.9) capacityPercent = 99.9;
+        uplinkEl.innerText = `↑ Uplink: ${capacityPercent.toFixed(1)}% capacity`;
+    }
     if (timeEl) {
         timeEl.innerText = new Date().toLocaleTimeString("ru-RU", {
             timeZone: "Europe/Berlin", hour: '2-digit', minute: '2-digit', second: '2-digit'
@@ -50,7 +57,6 @@ function renderUI() {
 function drawRow(packet) {
     const body = document.getElementById('traffic-body');
     if (!body) return;
-
     const row = document.createElement('tr');
     row.innerHTML = `
         <td class="p-4 border-r-2 border-black td-ip font-black">${packet.ip}</td>
