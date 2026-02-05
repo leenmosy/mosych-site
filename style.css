@@ -1,7 +1,7 @@
 :root {
     --main-bg: #f0f0f0;
     --border-global: #000000;
-    --header-bg: #ffee00;
+    --header-bg: #fffc5b;
     --header-text: #000000;
     --status-badge-bg: #ffffff;
     --card1-bg: #fffbd2;
@@ -18,7 +18,7 @@
     --card3-sub: #484848;
     --table-bg: #ffffff;
     --table-head-bg: #000000;
-    --table-subhead-bg: #f9fafb;
+    --table-subhead-bg: #f0f0f0;
     --color-ip: #000000;
     --color-protocol: #000000;
     --color-payload: #000000;
@@ -97,5 +97,6 @@ th:last-child, td:last-child {
     .table-block { font-size: 13px; }
     th, td { padding: 0.75rem 0.5rem !important; }
 }
+
 
 
