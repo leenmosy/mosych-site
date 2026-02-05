@@ -60,8 +60,8 @@ function drawRow(packet) {
     const row = document.createElement('tr');
     row.innerHTML = `
         <td class="p-4 border-r-2 border-black td-ip font-black">${packet.ip}</td>
-        <td class="p-4 border-r-2 border-black td-protocol font-black text-xs">${packet.proto}</td>
-        <td class="p-4 border-r-2 border-black td-payload font-black text-xs opacity-70">${packet.payload}</td>
+        <td class="p-4 border-r-2 border-black td-protocol font-black">${packet.proto}</td>
+        <td class="p-4 border-r-2 border-black td-payload font-black">${packet.payload}</td>
         <td class="p-4 border-r-2 border-black td-status font-black text-green-600">ENCRYPTED</td>
     `;
     body.prepend(row);
@@ -93,5 +93,6 @@ function startApp() {
         document.getElementById('t-main')?.classList.add('show');
     }, 1100);
 }
+
 
 window.onload = runLoader;
