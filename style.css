@@ -24,7 +24,7 @@
     --color-payload: #000000;
     --color-status: #10b981;
     --loader-bg: #000000;
-    --loader-accent: #ffee00;
+    --loader-accent: #fffc5b;
 }
 
 ::selection {
@@ -105,10 +105,16 @@ th:last-child, td:last-child {
 #traffic-body tr { animation: slideIn 0.3s ease-out; }
 @keyframes slideIn { from { opacity: 0; transform: translateX(-15px); } to { opacity: 1; transform: translateX(0); } }
 
+#traffic-body tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+}
+
 @media (max-width: 768px) {
     .table-block { font-size: 13px; }
     th, td { padding: 0.75rem 0.5rem !important; }
 }
+
 
 
 
